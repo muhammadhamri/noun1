@@ -1,0 +1,280 @@
+/* @import url("https://fonts.googleleapis.com/css?family=Monserrat"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(67, 243, 67);
+  color: black;
+}
+
+.draggable-elements {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+.draggable {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  /* margin: orem 0.5rem; */
+  cursor: move;
+  transition: opacity 0.2s;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+}
+
+.draggable:hover {
+  opacity: 0.5;
+}
+
+.draggable-elements {
+  display: flex;
+  align-items: center;
+  width: 550px;
+  height: 180px;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+
+  margin-top: 25px;
+}
+
+.droppable-elements {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 350px;
+  flex-wrap: wrap;
+  margin: auto;
+
+  margin-top: 50px;
+}
+
+.droppable {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin: 3px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: aliceblue;
+  border: 3px dashed black;
+  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+.droppable span {
+  font-size: 1.25rem;
+  pointer-events: none;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+/* drag and drpo realated styling */
+
+.droppable.droppable_hover {
+  border-width: 5px;
+  transform: scale(1.1);
+}
+
+.droppable.dropped {
+  border-style: solid;
+  color: aliceblue;
+}
+
+.droppable.dropped span {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: red;
+}
+
+.droppable.dropped i {
+  pointer-events: none;
+}
+
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
+
+.end {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: rgb(221, 241, 221);
+  padding-top: 50px;
+  display: none;
+  padding: 10px;
+
+  margin: auto;
+}
+
+.end h1 h2 p {
+  text-align: center;
+  color: aliceblue;
+}
+span {
+  color: rgb(13, 0, 128);
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.end1 {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: rgb(238, 248, 238);
+  padding-top: 50px;
+  display: none;
+  padding: 10px;
+
+  margin: auto;
+}
+
+.end,
+h1,
+h2,
+p {
+  text-align: center;
+  color: rgb(5, 18, 207);
+}
+.end1 span {
+  color: rgb(219, 5, 16);
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.end1 span {
+  margin-bottom: 25px;
+}
+
+.end1 a {
+  display: block;
+  width: 150px;
+  height: 30px;
+  border-radius: 9px;
+  background-color: red;
+  margin: auto;
+  margin-top: 25px;
+  color: aliceblue;
+  line-height: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.end1 a:hover {
+  background-color: rgb(201, 57, 57);
+}
+
+.end a {
+  display: block;
+  width: 150px;
+  height: 30px;
+  border-radius: 9px;
+  background-color: rgb(9, 255, 0);
+  margin: auto;
+  margin-top: 25px;
+  color: aliceblue;
+  line-height: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.end a:hover {
+  background-color: rgb(201, 57, 57);
+}
+
+.score {
+  position: absolute;
+  height: 60px;
+  width: 110px;
+  border-radius: 50%;
+  background-color: rgb(19, 33, 231);
+  display: flex;
+  left: 60px;
+}
+
+#user-score {
+  margin: auto;
+  display: block;
+  color: aliceblue;
+  font-weight: bold;
+  text-align: center;
+}
+
+.geser {
+  margin-top: 20px;
+  font-size: 20px;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  .draggable-elements {
+    margin: 1.5rem;
+  }
+
+  .droppable-elements {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    gap: 2;
+    margin: auto;
+    justify-items: center;
+    margin-top: 65px;
+    width: 400px;
+    height: 250px;
+    border: none;
+  }
+
+  .draggable-elements {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    gap: 2;
+    margin: auto;
+    justify-items: center;
+    margin-top: 30px;
+    border: none;
+  }
+
+  .score {
+    top: 240px;
+    left: 20px;
+    height: 40px;
+    width: 90px;
+    box-shadow: -2px -3px 4px yellow;
+    animation: score 0.7s ease-in-out infinite;
+  }
+  @keyframes score {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(3px);
+    }
+  }
+}
